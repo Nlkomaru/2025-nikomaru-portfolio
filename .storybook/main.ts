@@ -1,7 +1,7 @@
 import type { StorybookConfig } from "@storybook/nextjs-vite";
 
 const config: StorybookConfig = {
-    stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+    stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
     addons: [
         "@chromatic-com/storybook",
         "@storybook/addon-docs",
@@ -10,9 +10,15 @@ const config: StorybookConfig = {
         "@storybook/addon-vitest",
     ],
     framework: {
-        name: "@storybook/nextjs-vite",
+        name: "@storybook/react-vite",
         options: {},
     },
-    staticDirs: ["../public"],
+    viteFinal: async (config, { configType }) => {
+        config.esbuild = {
+            ...config.esbuild,
+            jsx: "automatic",
+        };
+        return config;
+    },
 };
 export default config;
