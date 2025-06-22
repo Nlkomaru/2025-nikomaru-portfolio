@@ -4,13 +4,12 @@
  */
 {
     "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "2025-nikomaru-portfolio",
-    "main": ".open-next/worker.js",
+    "name": "2025-nikomaru-portfolio-storybook",
     "compatibility_date": "2025-03-01",
     "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
     "assets": {
-        "binding": "ASSETS",
-        "directory": ".open-next/assets"
+        "directory": "./storybook-static",
+        "not_found_handling": "single-page-application"
     },
     "observability": {
         "enabled": true
