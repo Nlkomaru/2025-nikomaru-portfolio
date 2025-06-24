@@ -1,4 +1,4 @@
-import {defineTokens} from "@pandacss/dev";
+import { defineTokens } from "@pandacss/dev";
 
 export const yellow = defineTokens.colors({
     yellow: {

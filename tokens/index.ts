@@ -3,7 +3,12 @@ import { colors } from "./color/base";
 import { radii } from "./radii";
 import { sizes } from "./sizes";
 import { spacing } from "./spacing";
-import { fontSizes, fontWeights, letterSpacings, lineHeights } from "./typography";
+import {
+    fontSizes,
+    fontWeights,
+    letterSpacings,
+    lineHeights,
+} from "./typography";
 
 export const tokens = defineTokens({
     colors,

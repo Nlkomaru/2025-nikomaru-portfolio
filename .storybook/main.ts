@@ -1,4 +1,4 @@
-import type { StorybookConfig } from "@storybook/nextjs-vite";
+import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
     stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -13,7 +13,7 @@ const config: StorybookConfig = {
         name: "@storybook/react-vite",
         options: {},
     },
-    viteFinal: async (config, { configType }) => {
+    viteFinal: async (config) => {
         config.esbuild = {
             ...config.esbuild,
             jsx: "automatic",
