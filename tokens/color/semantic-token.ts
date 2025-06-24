@@ -16,6 +16,9 @@ const semanticTokens: SemanticTokens["colors"] = {
         disabled: { value: "{colors.gray.400}" },
         error: { value: "{colors.red.500}" },
     },
+    bg: {
+        default: { value: "{colors.umi.700}" },
+    },
 };
 
 export default semanticTokens;

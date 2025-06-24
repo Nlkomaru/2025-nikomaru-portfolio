@@ -1,9 +1,9 @@
 import { defineTokens } from "@pandacss/dev";
+import { gray } from "./gray";
+import { red } from "./red";
 import { umi } from "./umi";
 import { white } from "./white";
-import {yellow} from "./yellow";
-import { red } from "./red";
-import { gray } from "./gray";
+import { yellow } from "./yellow";
 
 // 基本的な色パレットを定義
 export const colors = defineTokens.colors({
@@ -11,5 +11,5 @@ export const colors = defineTokens.colors({
     ...white,
     ...yellow,
     ...red,
-    ...gray
+    ...gray,
 });
