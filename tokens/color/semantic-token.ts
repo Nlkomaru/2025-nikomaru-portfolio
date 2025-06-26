@@ -18,7 +18,7 @@ const semanticTokens: SemanticTokens["colors"] = {
         default: { value: "{colors.umi.700}" },
     },
     text: {
-        default: { value: "{colors.gray.900}" },
+        default: { value: "{colors.gray.1200}" },
         emphasized: { value: "{colors.umi.700}" },
     },
 };
