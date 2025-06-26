@@ -27,6 +27,21 @@ const globalCss = defineGlobalStyles({
     "*::selection": {
         bg: "token(palette.default)/50",
     },
+    // リセットスタイル - 白色の縁を削除
+    "html, body": {
+        margin: 0,
+        padding: 0,
+        height: "100%",
+        boxSizing: "border-box",
+    },
+    "*, *::before, *::after": {
+        boxSizing: "inherit",
+    },
+    //linkのスタイルを削除
+    a: {
+        textDecoration: "none",
+        color: "inherit",
+    },
 });
 
 export default defineConfig({
