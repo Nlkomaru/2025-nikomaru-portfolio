@@ -1,20 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { css } from "../../../../styled-system/css";
 
-export const Title = () => {
-    const { setTheme, theme } = useTheme();
-    const [clientTheme, setClientTheme] = useState<string | undefined>(
-        undefined,
-    );
+interface TitleProps {
+    onAnimationComplete?: () => void;
+}
 
-    useEffect(() => {
-        setClientTheme(theme);
-    }, [theme]);
-
+export const Title = ({ onAnimationComplete }: TitleProps) => {
     return (
         <motion.h1
             className={css({
@@ -26,7 +19,9 @@ export const Title = () => {
                 },
                 fontStyle: "normal",
                 fontWeight: 500,
-                lineHeight: "normal",
+                lineHeight: 1.2,
+                margin: 0,
+                padding: 0,
                 _firstLetter: {
                     fontFamily: "var(--font-montserrat)",
                 },
@@ -34,6 +29,7 @@ export const Title = () => {
             initial={{ x: "-200%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
+            onAnimationComplete={onAnimationComplete}
         >
             Nikomaru
             <br />

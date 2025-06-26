@@ -54,7 +54,7 @@ const BubbleScene = () => {
     const pathname = usePathname();
     const { theme } = useTheme();
     const [speed, setSpeed] = useState(0);
-    const [colorRange, setColorRange] = useState<string>("blue");
+    const [colorRange] = useState<string>("blue");
 
     useEffect(() => {
         setSpeed(1);
@@ -142,7 +142,7 @@ const BubbleScene = () => {
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [theme, pathname, speed]);
+    }, [theme, pathname, speed, colorRange]);
 
     return (
         <canvas
