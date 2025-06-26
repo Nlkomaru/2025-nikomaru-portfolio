@@ -54,7 +54,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          environment: production
           secrets: |
             CF_ACCESS_CLIENT_ID
             CF_ACCESS_CLIENT_SECRET
