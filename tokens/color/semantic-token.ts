@@ -2,10 +2,8 @@ import type { SemanticTokens } from "@pandacss/dev";
 
 const semanticTokens: SemanticTokens["colors"] = {
     palette: {
-        default: { value: "{colors.umi.700}" },
-        emphasized: { value: "{colors.umi.700/80}" },
+        default: { value: "{colors.umi.500}" },
         fg: { value: "{colors.white}" },
-        text: { value: "{colors.umi.700}" },
         error: { value: "{colors.red.600}" },
         warning: { value: "{colors.yellow.300}" },
     },
@@ -17,6 +15,9 @@ const semanticTokens: SemanticTokens["colors"] = {
         error: { value: "{colors.red.500}" },
     },
     bg: {
+        default: { value: "{colors.umi.700}" },
+    },
+    text: {
         default: { value: "{colors.umi.700}" },
     },
 };

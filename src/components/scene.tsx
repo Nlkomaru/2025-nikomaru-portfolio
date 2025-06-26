@@ -30,7 +30,7 @@ export default function Scene() {
             const baseColor =
                 getComputedStyle(canvas)
                     .getPropertyValue("--palette-default")
-                    .trim() || "rgb(76, 140, 200)";
+                    .trim() || "rgb(0, 0, 0)";
 
             const grid = 2; // 点を配置するグリッド間隔
             for (let y = 0; y < height; y += grid) {
@@ -46,7 +46,7 @@ export default function Scene() {
 
                     // 点サイズと透明度
                     const size = 0.6 + intensity; // 0.6〜2.6
-                    const alpha = intensity * 0.5; // 0.0〜0.5
+                    const alpha = intensity * 0.8; // 0.0〜0.5
 
                     ctx.fillStyle = `color-mix(in oklab, ${baseColor} ${alpha * 100}%, transparent)`;
                     ctx.beginPath();
