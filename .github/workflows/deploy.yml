@@ -54,7 +54,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: deploy -c wrangler.jsonc
+          environment: production
           secrets: |
             CF_ACCESS_CLIENT_ID
             CF_ACCESS_CLIENT_SECRET
@@ -63,11 +63,3 @@ jobs:
           CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
           CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
           R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
-          
-      - name: Deploy storybook preview
-        id: deploy-storybook-preview
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_KEY }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: deploy -c wrangler-storybook.jsonc
